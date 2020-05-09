@@ -1,2 +1,2 @@
 # PUG-SASS-jQuery-GULP-Hookah-page
-PUG SASS GULP jQuery landing page | Test work for MEDIAARMY
+PUG SASS jQuery GULP landing page | Test work for MEDIAARMY
