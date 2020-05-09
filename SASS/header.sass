@@ -1,0 +1,253 @@
+.container
+    margin: 0 auto
+    width: 1200px
+    padding: 96px 0
+    @media screen and ( max-width: 1200px )
+        width: 100%
+    @media screen and ( max-width: 1000px )
+        width: 100%
+.header
+    position: relative
+    @media screen and ( max-width: 1000px )
+        background: url('/IMG/window.png') center/cover no-repeat
+        z-index: 0
+    & .container
+        @include flex-between
+        flex-direction: column
+        height: 870px
+        @media screen and ( max-width: 1000px )
+            height: 710px
+    &::before,&::after
+        content: ""
+        position: absolute
+        height: 100%
+        top: 0
+        z-index: -1
+    &::before
+        background: url('/IMG/smoke.png') no-repeat -10px 150px #30333C
+        width: 43%
+        left: 0
+        @media screen and ( max-width: 1000px )
+            display: none
+    &::after
+        background: url("/IMG/window1200.png") center/cover no-repeat
+        width: 57%
+        right: 0
+        @media screen and ( max-width: 1000px )
+            display: none
+    &__row
+        @include flex-between
+        align-items: center
+        padding: 0 20px
+        @media screen and ( max-width: 1000px )
+            padding: 0 20px
+            position: relative
+    &__title
+        @include text
+        font-weight: bold
+        font-size: 20px
+        line-height: 28px
+        color: #E3E7EF
+        z-index: 1
+        transition: all 0.5s ease 0s
+        @media screen and ( max-width: 1000px )
+            position: relative
+            padding-left: 80px
+            &::before
+                content: ""
+                position: absolute
+                width: 110px
+                height: 160px
+                background: url('/IMG/logo.png') no-repeat 10px #6C525B
+                z-index: -1
+                top: -106px
+                left: -5px
+        @media screen and ( max-width: 315px )
+            width: 100px
+    &__social-links
+        @include flex-between
+        width: 99px
+        transition: all 0.3s ease 0s
+        @media screen and ( max-width: 1000px )
+            margin-right: 15%
+        .social-links__link
+            &:hover
+                cursor: pointer
+                filter: brightness(0) invert(1)
+            & img
+                vertical-align: middle
+        @media screen and ( max-width: 507px )
+            display: none
+    &__burger
+        display: none
+        @media screen and ( max-width: 1000px )
+            display: block
+            position: absolute
+            width: 25px
+            height: 16px
+            right: 20px
+            z-index: 3
+            transition-duration: 0.5s
+            &:hover
+                cursor: pointer
+            &::before,&::after
+                content: ""
+                background-color: #fff
+                position: absolute
+                width: 25px
+                height: 2px
+                left: 0
+                transition: all 0.5s ease 0s
+            &::before
+                top: 0
+            &::after
+                bottom: 0
+            & span
+                background-color: #fff
+                position: absolute
+                width: 25px
+                height: 2px
+                left: 0
+                bottom: 45%
+            &.active::before
+                transform: rotate(45deg)
+                top: 7px
+            &.active::after
+                transform: rotate(-45deg)
+                bottom: 7px
+            &.active span
+                display: none
+        @media screen and ( max-width: 650px )
+            top: 6px
+    &__menu
+        width: 612/1200*100%
+        @include text
+        font-weight: 500
+        font-size: 14px
+        line-height: 21px
+        @media screen and ( max-width: 1000px  )
+            display: block
+            position: absolute
+            top: -1000px
+            left: 0
+            width: 100%
+            height: 500px
+            background-color: #30333B
+            box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.178)
+            z-index: 2
+            transition: all 0.5s ease 0s
+        &.active
+            top: -96px
+    &__list
+        @include flex-between
+        @media screen and ( max-width: 1000px )
+            @include flex-between
+            flex-direction: column
+            align-items: center
+            margin-top: 100px
+        & li
+            @media screen and ( max-width: 1000px )
+                margin-bottom: 20px
+        & a
+            color: #EDF0F4
+            padding-bottom: 10px
+            &:hover
+                cursor: pointer
+                border-bottom: 2px solid #6C525B
+        .list__social-links
+            display: none
+            @media screen and ( max-width: 1000px )
+                display: block
+                @include flex-between
+                width: 99px
+                margin-top: 42px
+            & img
+                vertical-align: middle
+    &__square
+        position: relative
+        margin: 10px
+        &-title
+            width: 794px
+            font-family: Merriweather
+            font-style: normal
+            font-weight: bold
+            font-size: 58px
+            line-height: 85px
+            color: #FFFFFF
+            @media screen and ( max-width: 1000px )
+                width: 685px
+                height: 146px
+                font-size: 50px
+                line-height: 73px
+            &::before
+                content: ""
+                width: 386px
+                height: 351px
+                position: absolute
+                top: -50%
+                border: 7px solid #6C525B
+                z-index: -1
+                @media screen and ( max-width: 1000px )
+                    width: 386px
+                    height: 277px
+                    top: -45%
+            @media screen and ( max-width: 720px )
+                display: none
+    &__contacts
+        @include flex-between
+        position: relative
+        width: 671px
+        border-top: 1px solid #4D515E
+        padding-top: 31px
+        margin-left: 10px
+        color: #C8CDD8
+        font-family: 'Montserrat'
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height:
+        @media screen and ( max-width: 690px )
+            width: 50%
+            height: 150px
+            flex-direction: column
+            margin-bottom: -20px
+            @media screen and ( max-width: 390px )
+                width: 205px
+
+        &-item
+            display: flex
+            align-items: flex-start
+            white-space: pre-line
+            &:first-child
+                margin-left: 0
+            &-link
+                color: #C8CDD8
+                text-decoration: none
+                font-style: normal
+                font-weight: bold
+                font-size: 16px
+                line-height: 23px
+            .header__contacts-item--phone
+                &:before
+                    content: ""
+                    display: inline-block
+                    width: 21px
+                    height: 18px
+                    margin-right: 8px
+                    background: url('IMG/phone.png') center no-repeat
+            .header__contacts-item--schedule
+                &:before
+                    content: ""
+                    display: inline-block
+                    width: 21px
+                    height: 18px
+                    margin-right: 8px
+                    background: url('IMG/clock.png') center no-repeat
+            .header__contacts-item--location
+                &:before
+                    content: ""
+                    display: inline-block
+                    width: 21px
+                    height: 18px
+                    margin-right: 8px
+                    background: url('IMG/marker.png') center no-repeat

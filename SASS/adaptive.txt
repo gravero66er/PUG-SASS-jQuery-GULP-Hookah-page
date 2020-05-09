@@ -1,0 +1,72 @@
+Для фиксированной верстки:
+
+1) body
+        min-width:
+2) viewport в html c фиксированной шириной
+
+++++++++++++++++++++++++++++++++++++++++++
+
+Для отзывчивой верстки:
+
+1) container
+        max-width:
+2) viewport в html width=device-width
+3) Никаких значений в пикселях (желательно)     
+
+++++++++++++++++++++++++++++++++++++++++++
+
+Для адаптивной верстки: 
+
+1) Медиа-запросы: (пример container)
+
+ @media (max-width: 1200px){
+     container{
+         max-width: 970px
+     }
+ }
+ @media (max-width: 992px){
+     container{
+         max-width: 750px
+     }
+ }
+ @media (max-width: 767px){
+     container{
+         max-width: none
+     }
+ }
+
+Mobile First 
+
+1) Медиа-запросы наоборот:
+
+@media (min-width: 767px) {
+
+}
+
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 1200px) {
+    
+}
+
+++++++++++++++++++++++++++++++++++++++++++
+
+Хорошие практики:
+
+IMG: max-width: 100%
+
+++++++
+
+Элемент
++
+Медиа-запрос
++
+Медиа-запрос
+
+Элемент
++
+Медиа-запрос
++
+Медиа-запрос

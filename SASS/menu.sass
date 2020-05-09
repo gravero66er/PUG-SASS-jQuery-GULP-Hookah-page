@@ -1,0 +1,322 @@
+.menu
+    padding: 0 10px 30px
+    &__row
+        @include flex-between
+        margin-bottom: 43px
+        position: relative
+    &__title
+        @include title
+        font-size: 36px
+        line-height: 52px
+        color: #2B2D33
+        @media screen and ( max-width: 900px )
+            font-size: 28px
+            line-height: 41px
+    &__img
+        width: 188px
+        height: 166px
+        background: url('IMG/ashtray.svg') 0 0/contain no-repeat
+        position: absolute
+        right: 0
+        bottom: -80px
+        @media screen and ( max-width: 940px )
+            width: 135px
+            height: 113px
+            bottom: -30px
+    &__tabs
+        .tabs__items
+            display: flex
+            justify-content: flex-start
+            border-bottom: 1px solid #BDC4CF
+            @media screen and ( max-width: 900px )
+                justify-content: space-between
+            @media screen and ( max-width: 740px )
+                flex-direction: column
+                border: none
+                margin-bottom: -43px
+            .tabs__item
+                width: 240px
+                height: 58px
+                text-align: center
+                padding-top: 18px
+                @include text
+                font-weight: bold
+                font-size: 18px
+                line-height: 25px
+                color: #2B2D33
+                &:hover
+                    color: #E3E5EA
+                    background-color: #6C525B
+                @media screen and ( max-width: 900px )
+                    font-size: 16px
+                    line-height: 23px
+                @media screen and ( max-width: 330px )
+                    width: 200px
+                    font-size: 14px
+                    line-height: 21px
+        .tabs__body
+            .tabs__block
+                .tabs__slider
+                    margin-top: 51px
+                    position: relative
+                    display: none
+                .tabs__slider.active__tab
+                    display: block
+                    .slick-arrow
+                        position: absolute
+                        top: -58px
+                        right: 0
+                        width: 34px
+                        height: 43px
+                        font-size: 0
+                        border: 1px solid #AEB2BA
+                        box-sizing: border-box
+                        opacity: 0.5
+                        &:hover
+                            border-color: #585E67
+                            cursor: pointer
+                            opacity: 1
+                        &.slick-prev
+                            position: absolute
+                            right: 44px
+                            background: url('IMG/arrow.png') center no-repeat transparent
+                        &.slick-next
+                            background: url('IMG/arrow.png') center no-repeat transparent
+                            transform: rotate(180deg)
+                    .slick-list
+                        overflow: hidden
+                        .slick-track
+                            @include flex-between
+                            max-width: 100%
+                            .slider__item
+                                @include text
+                                font-size: 17px
+                                line-height: 21px
+                                width: 33%
+                                padding: 45px 30px
+                                border: 4px solid #CFD2D9
+                                box-sizing: border-box
+                                @media screen and ( max-width: 900px )
+                                    padding: 45px 10px
+                                @media screen and ( max-width: 704px )
+                                    min-width: 236px
+                                &:not(:last-child)
+                                    margin-right: 25px
+                                    @media screen and ( max-width: 900px )
+                                        margin-right: 10px
+                                &.active__tab
+                                    display: block
+                                .slider__title-row
+                                    @include flex-between
+                                    .slider__title
+                                        font-weight: bold
+                                        color: #2B2D33
+                                        @media screen and ( max-width: 900px )
+                                            font-size: 15px
+                                            line-height: 18px
+                                    .slider__price
+                                        font-weight: bold
+                                        color: #6C525B
+                                        @media screen and ( max-width: 900px )
+                                            font-size: 15px
+                                            line-height: 18px
+                                .slider__info
+                                    margin: 61px 0 0 0
+                                    height: 99px
+                                    display: flex
+                                    justify-content: flex-end
+                                    flex-direction: column
+                                    .info__item
+                                        font-weight: 500
+                                        font-size: 15px
+                                        line-height: 19px
+                                        color: #2B2D33
+                                        &:not(:first-child)
+                                            margin-top: 13px
+                                        @media screen and ( max-width: 900px )
+                                            font-size: 15px
+                                            line-height: 18px
+                                        & span
+                                            font-weight: 600
+                .tabs__slider
+                    margin-top: 51px
+                    position: relative
+                    display: none
+                .tabs__slider.active__tab
+                    display: block
+                    .slick-arrow
+                        position: absolute
+                        top: -58px
+                        right: 0
+                        width: 34px
+                        height: 43px
+                        font-size: 0
+                        border: 1px solid #AEB2BA
+                        box-sizing: border-box
+                        opacity: 0.5
+                        &:hover
+                            border-color: #585E67
+                            cursor: pointer
+                            opacity: 1
+                        &.slick-prev
+                            position: absolute
+                            right: 44px
+                            background: url('IMG/arrow.png') center no-repeat transparent
+                        &.slick-next
+                            background: url('IMG/arrow.png') center no-repeat transparent
+                            transform: rotate(180deg)
+                    .slick-list
+                        overflow: hidden
+                        .slick-track
+                            @include flex-between
+                            max-width: 100%
+                            .slider__item-cigars
+                                @include text
+                                font-size: 17px
+                                line-height: 21px
+                                width: 33%
+                                height: 413px
+                                padding: 45px 30px
+                                border: 4px solid #CFD2D9
+                                box-sizing: border-box
+                                @media screen and ( max-width: 900px )
+                                    padding: 45px 10px
+                                @media screen and ( max-width: 731px )
+                                    min-width: 236px
+                                &:not(:last-child)
+                                    margin-right: 25px
+                                    @media screen and ( max-width: 900px )
+                                        margin-right: 10px
+                                &:last-child
+                                    height: 162px
+                                &:nth-child(2)
+                                    height: 337px
+                                    @media screen and ( max-width: 1044px )
+                                        height: 370px
+                                .slider__title-row
+                                    .slider__title
+                                        font-weight: bold
+                                        color: #2B2D33
+                                        @media screen and ( max-width: 900px )
+                                            font-size: 15px
+                                            line-height: 18px
+                                .slider__info-cigars
+                                    .info__item--cigars
+                                        white-space: pre-line
+                                        font-size: 13px
+                                        line-height: 25px
+                                        text-transform: uppercase
+                                        @media screen and ( max-width: 1044px )
+                                            font-size: 12px
+                                            line-height: 23px
+                                    .info__item--cigars-badone
+                                        white-space: pre-line
+                                        font-size: 13px
+                                        line-height: 25px
+                                        text-transform: uppercase
+                                        margin-top: 20px
+                                        @media screen and ( max-width: 1044px )
+                                            font-size: 12px
+                .tabs__slider
+                    margin-top: 51px
+                    position: relative
+                    display: none
+                .tabs__slider.active__tab
+                    display: block
+                    .slick-arrow
+                        position: absolute
+                        top: -58px
+                        right: 0
+                        width: 34px
+                        height: 43px
+                        font-size: 0
+                        border: 1px solid #AEB2BA
+                        box-sizing: border-box
+                        opacity: 0.5
+                        &:hover
+                            border-color: #585E67
+                            cursor: pointer
+                            opacity: 1
+                        &.slick-prev
+                            position: absolute
+                            right: 44px
+                            background: url('IMG/arrow.png') center no-repeat transparent
+                        &.slick-next
+                            background: url('IMG/arrow.png') center no-repeat transparent
+                            transform: rotate(180deg)
+                    .slick-list
+                        overflow: hidden
+                        .slick-track
+                            @include flex-between
+                            max-width: 100%                            
+                            line-height: 23px
+                            .slider__item-classic
+                                @include text
+                                font-size: 17px
+                                line-height: 21px
+                                width: 33%
+                                height: 380px
+                                padding: 45px 30px
+                                border: 4px solid #CFD2D9
+                                box-sizing: border-box
+                                @media screen and ( max-width: 900px )
+                                    padding: 45px 10px
+                                @media screen and ( max-width: 740px )
+                                    min-width: 236px
+                                &:not(:last-child)
+                                    margin-right: 25px
+                                    @media screen and ( max-width: 1100px )
+                                        margin-right: 10px
+                                &:last-child
+                                    height: 337px
+                                &:nth-child(2)
+                                    height: 532px
+                                .slider__title-row
+                                    .slider__title
+                                        font-weight: bold
+                                        color: #2B2D33
+                                        @media screen and ( max-width: 1100px )
+                                            font-size: 15px
+                                            line-height: 18px
+                                .slider__info-classic
+                                    @include flex-between
+                                    flex-direction: column
+                                    height: 100%
+                                    padding-top: 31px
+                                    .info__item--classic
+                                        font-size: 15px
+                                        &:last-child
+                                            @media screen and ( max-width: 1100px )
+                                                padding-bottom: 30px
+                                        &:not(:last-child)
+                                            margin-bottom: 15px
+                                        .item-title
+                                            font-weight: bold
+                                            line-height: 18px
+                                            color: #2B2D33
+                                            margin-bottom: 15px
+                                            @media screen and ( max-width: 1100px )
+                                                font-size: 14px
+                                                line-height: 17px
+                                        & p
+                                            font-weight: 500
+                                            line-height: 19px
+                                            @media screen and ( max-width: 1100px )
+                                                font-size: 14px
+                                                line-height: 18px
+                                            &:not(:last-child)
+                                                margin-bottom: 15px
+                                            & span
+                                                font-weight: bold
+                                                font-size: 17px
+                                                line-height: 21px
+                                                color: #6C525B
+                                                margin-left: 9px
+                                                @media screen and ( max-width: 950px )
+                                                    font-size: 14px
+                                                    line-height: 17px
+                                        &-note
+                                            font-size: 15px
+                                            @media screen and ( max-width: 950px )
+                                                font-size: 14px
+                                                line-height: 20px

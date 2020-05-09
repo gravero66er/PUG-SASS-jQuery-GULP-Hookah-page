@@ -1,0 +1,108 @@
+.advantages
+    margin: 0 auto
+    position: relative
+    max-width: 1200px
+    @include flex-between
+    @media screen and ( max-width: 1020px )
+        display: block
+        position: relative
+        margin-top: 120px
+    &__spotlight
+        position: absolute
+        left: -300/1200*100%
+        width: 1090px
+        height: 659px
+        background: url('IMG/spotlight.png') center/cover no-repeat
+        opacity: 0.9
+        @media screen and ( max-width: 1020px )
+            background: url('IMG/spotlight-mid.png') center/cover no-repeat
+            position: static
+            margin: 0 auto
+            width: 100%
+            height: 530px
+            opacity: 1
+            @media screen and ( max-width: 450px )
+                background: url('IMG/spotlight-min.png') center no-repeat
+                width: 100%
+                height: 259px
+                overflow: visible
+                margin-top: 450px
+    &__info
+        position: absolute
+        width: 640/1050*100%
+        height: 479px
+        left: 466/1200*100%
+        top: 90px
+        background: #30333B
+        padding: 62px
+        @media screen and ( max-width: 1020px )
+            position: static
+            margin: -690px auto
+            width: 664px
+            @media screen and ( max-width: 664px )
+                width: 100%
+                padding: 62px 0
+                @media screen and ( max-width: 550px )
+                    height: 563px
+                    @media screen and ( max-width: 450px )
+                        margin: -780px auto
+        .info__row
+            @include flex-between
+            .info__title
+                @include title
+                font-size: 36px
+                line-height: 52px
+                color: #FFFFFF
+                @media screen and ( max-width: 664px )
+                    font-size: 28px
+                    line-height: 41px
+                    margin: 0 0 0 15px
+                    @media screen and ( max-width: 360px )
+                        font-size: 23px
+                        line-height: 46px
+                        margin: 0 0 0 10px
+            .info__img
+                width: 175px
+                height: 56px
+                background: url('IMG/leaf.png') center/cover no-repeat
+                margin-right: -20px
+                @media screen and ( max-width: 664px )
+                    width: 124px
+                    height: 40px
+                    background: url('IMG/leaf_min.png') center/cover no-repeat
+                    margin: 0 15px 0 0
+        .info__list
+            margin: 48px 50px
+            @include flex-between
+            flex-direction: column
+            vertical-align:
+            height: 134px
+            &-item
+                position: relative
+                @include text
+                font-weight: normal
+                font-size: 15px
+                line-height: 23px
+                color: #FFFFFF
+                margin: 0 0 38px 0
+                width: 499px
+                white-space: pre-wrap
+                @media screen and ( max-width: 664px )
+                    max-width: 100%
+                    @media screen and ( max-width: 400px )
+                        max-width: 300px
+                        @media screen and ( max-width: 360px )
+                            font-size: 13px
+                            line-height: 35px
+                            margin: 0 0 0 10px
+                            max-width: 250px
+                &::before
+                    content: ""
+                    position: absolute
+                    left: -40px
+                    top: -10px
+                    width: 18px
+                    height: 40px
+                    background: url('IMG/lines.png') center no-repeat
+                &:nth-child(2)::before
+                    top: 5px

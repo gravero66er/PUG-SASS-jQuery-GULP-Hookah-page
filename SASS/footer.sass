@@ -1,0 +1,257 @@
+.footer
+    @media screen and ( max-width: 400px )
+        margin-top: -100px  
+    &__banner
+        margin: 0 auto
+        max-width: 100%
+        height: 236px
+        background: linear-gradient(90deg, #30333B 44.39%, rgba(48, 51, 59, 0.51) 100%), url('IMG/restaurant.png') right
+        @media screen and ( max-width: 675px )
+            height: 368px
+            background: linear-gradient(180deg, #30333B 44.39%, rgba(48, 51, 59, 0.51) 100%), url('IMG/restaurant.png') center/cover no-repeat
+        .container
+            padding: 65px 0
+            @media screen and ( max-width: 1200px )
+                padding: 65px 20px
+            @media screen and ( max-width: 1000px )
+                padding: 45px 5px
+            .footer__wrapper
+                @include flex-between
+                align-items: center
+                @media screen and ( max-width: 1000px )
+                    padding: 20px
+                @media screen and ( max-width: 675px )
+                    display: block
+                @media screen and ( max-width: 375px )
+                    padding: 20px
+                .footer__info
+                    @include flex-between
+                    flex-direction: column
+                    width: 100%
+                    height: 108px
+                    margin-right: 10px
+                    .footer__title
+                        @include title
+                        font-size: 24px
+                        line-height: 34px
+                        color: #FFFFFF
+                        @media screen and ( max-width: 1000px )
+                            font-size: 22px
+                            line-height: 32px
+                            margin: -20px 0 10px 0
+                        @media screen and ( max-width: 675px )
+                            width: 340px
+                        @media screen and ( max-width: 375px )
+                            font-size: 20px
+                            line-height: 30px
+                            width: 100%
+                    .footer__text
+                        @include text
+                        font-weight: normal
+                        font-size: 18px
+                        line-height: 26px
+                        color: #C8CDD8
+                        max-width: 685px
+                        @media screen and ( max-width: 1000px )
+                            font-size: 15px
+                            line-height: 22px
+                        @media screen and ( max-width: 675px )
+                            width: 340px
+                        @media screen and ( max-width: 360px )
+                            font-size: 13px
+                            line-height: 20px
+                            width: 280px
+                .footer__button
+                    min-width: 274px
+                    width: 274px
+                    height: 61px
+                    position: relative
+                    background: #6C525B
+                    padding: 20px 30px
+                    color: #FFFFFF
+                    @media screen and ( max-width: 675px )
+                        margin-top: 70px
+                    &:hover
+                        cursor: pointer
+                        background: #846A73
+                    & a
+                        @include text
+                        font-weight: 500
+                        font-size: 15px
+                        line-height: 21px
+                        margin: 0 5px 0 0
+                        &::after
+                            content: ""
+                            display: block
+                            position: absolute
+                            width: 19px
+                            height: 26px
+                            top: 18px
+                            right: 25px
+                            background: url('IMG/arrow_button.png') center no-repeat
+    &__contacts
+        @include flex-between
+        max-width: 1800px
+        margin: 0 auto
+        @media screen and ( max-width: 1000px )
+            display: block
+            position: relative
+    &__map
+        width: 55%
+        height: 614px
+        text-align: center
+        padding: 245px 0
+        @media screen and ( max-width: 1000px )
+            position: absolute
+            top: 322px
+            width: 100%
+            height: 490px
+        .map__title
+            @include title
+            font-size: 24px
+            line-height: 34px
+            color: #000000
+    &__contacts-wrapper
+        width: 45%
+        height: 614px
+        padding: 122px 50px
+        @media screen and ( max-width: 1000px )
+            position: absolute
+            top: 0
+            width: 100%
+            height: 322px
+            padding: 46px 20px
+            margin-bottom: 40px
+        @media screen and ( max-width: 360px )
+            padding: 46px 0 46px 10px
+        .contacts__row
+            position: relative
+            width: 375px
+            margin-bottom: 38px
+            @media screen and ( max-width: 420px )
+                width: 300px
+            .contacts__title
+                @include title
+                font-size: 36px
+                line-height: 52px
+                color: #2B2D33
+                @media screen and ( max-width: 360px )
+                    font-size: 28px
+                    line-height: 44px
+            .contacts__img
+                position: absolute
+                top: -20px
+                right: -20px
+                width: 100px
+                height: 104px
+                background: url('IMG/lighter.png') center no-repeat
+                @media screen and ( max-width: 1000px )
+                    top: 170px
+                    right: -335px
+                @media screen and ( max-width: 730px )
+                    top: -20px
+                    right: -20px
+                @media screen and ( max-width: 420px )
+                    right: -20px
+                @media screen and ( max-width: 360px )
+                    right: 0
+        .contacts__items
+            margin-bottom: 51px
+            @media screen and ( max-width: 1000px )
+                display: flex
+                justify-content: flex-start
+            @media screen and ( max-width: 730px )
+                display: block
+            .contacts__item
+                display: flex
+                align-items: flex-start
+                white-space: pre-line
+                @include text
+                font-weight: 500
+                font-size: 15px
+                line-height: 23px
+                &-link
+                    font-weight: bold
+                &:not(:last-child)
+                    margin-bottom: 24px
+                &:not(:first-child)
+                    min-width: 300px
+                &:first-child
+                    min-width: 190px
+                &:last-child
+                    min-width: 200px
+                .contacts-item--phone
+                    &:before
+                        content: ""
+                        display: inline-block
+                        width: 21px
+                        height: 18px
+                        margin-right: 8px
+                        background: url('IMG/phone.png') center no-repeat
+                .contacts-item--schedule
+                    &:before
+                        content: ""
+                        display: inline-block
+                        width: 21px
+                        height: 18px
+                        margin-right: 8px
+                        background: url('IMG/clock.png') center no-repeat
+                .contacts-item--location
+                    &:before
+                        content: ""
+                        display: inline-block
+                        width: 21px
+                        height: 18px
+                        margin-right: 8px
+                        background: url('IMG/marker.png') center no-repeat
+        .contacts__buttons
+            display: flex
+            width: 375px
+            @media screen and ( max-width: 420px )
+                width: 300px
+            .contacts__button
+                @include text
+                position: relative
+                font-weight: 500
+                font-size: 15px
+                line-height: 26px
+                color: #FFFFFF
+                background: #30333B
+                width: 180px
+                height: 60px
+                @media screen and ( max-width: 420px )
+                    width: 140px
+                    font-size: 13px
+                    line-height: 24px
+                &:not(:last-child)
+                    margin-right: 15px
+                    @media screen and ( max-width: 360px )
+                        margin-right: 10px
+                &:hover
+                    cursor: pointer
+                    opacity: 0.8
+                &--f
+                    position: absolute
+                    left: 60px
+                    top: 18px
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: -30px
+                        display: inline-block
+                        width: 12px
+                        height: 26px
+                        background: url('IMG/f_footer.png') center no-repeat
+                &--i
+                    position: absolute
+                    left: 60px
+                    top: 18px
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: -35px
+                        top: 2px
+                        display: inline-block
+                        width: 21px
+                        height: 22px
+                        background: url('IMG/i_footer.png') center no-repeat
